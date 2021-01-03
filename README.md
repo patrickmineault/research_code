@@ -1,8 +1,12 @@
-# Packaging user guide
+# Writing good research code good
 
-Running the https://python-packaging-user-guide.readthedocs.io/tutorials/packaging-projects/ as a tutorial.
+This repo contains example code that illustrates several points in a tutorial on write good research code good.
 
-## To install this package locally in development mode
+## Organization
+
+This repo follows the organization of [shablona](https://github.com/uwescience/shablona). It also uses the same setup as this tutorial on [setuptools](https://python-packaging-user-guide.readthedocs.io/tutorials/packaging-projects/).
+
+## To install the package locally in development mode
 
 `cd` into this directory, then run:
 
@@ -18,11 +22,10 @@ import example_pkg
 
 ## To test
 
-`cd` into the `tests` directory, then run each file individually, or run `nosetests`.
+`cd` into the `research_code/tests` directory, then run each file individually, or run `nosetests`.
 
-Under WSL, permissions for files are elevated; you will need to run:
+Under WSL, permissions for files are elevated; you will need to run for nosetests:
 
 ```
 nosetests --exe
 ```
-
