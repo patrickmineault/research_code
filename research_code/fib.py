@@ -1,5 +1,3 @@
-import functools
-
 def memoize(fun):
     """Memoizes a function of one argument."""
     the_dict = {}
@@ -9,6 +7,7 @@ def memoize(fun):
             the_dict[args[0]] = fun(args[0])
         return the_dict[args[0]]
     return wrapper_decorator
+
 
 @memoize
 def fib(n):
