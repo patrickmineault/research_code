@@ -21,5 +21,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install -e .
-      - name: Run tests with pytest
-        run: nosetests --with-coverage --cover-package=tests
+      - name: Lint with pylint
+        run: |
+          # From https://medium.com/swlh/automate-python-testing-with-github-actions-7926b5d8a865
+          pip install flake8
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      - name: Run tests with nose
+        run: |
+          pip install nose coverage
+          nosetests --with-coverage --cover-package=research_code
