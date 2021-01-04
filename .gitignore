@@ -130,3 +130,5 @@ dmypy.json
 
 # VSCode
 .vscode/
+data/cifar
+data/svhn
