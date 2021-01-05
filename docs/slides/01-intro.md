@@ -27,7 +27,7 @@
 # My weird perspective
 
 * Patrick Mineault, PhD
-* As undergrad, did programming on the side and ran open source project amfphp
+* As a physics & math undergrad, did programming on the side and ran open source project amfphp
 * PhD on receptive fields in early visual cortex at the MNI with Chris Pack
 * Postdoc at UCLA with Dario Ringach
 * (wildly underqualified) software engineer at Google
@@ -208,7 +208,6 @@ Everything at Google is one giant monorepo with billions of lines of code ([http
 
 * Keep things tidy
 * Free your W&LTM from having to remember where stuff is
-* Exercise 1: use the shablona template for a project
-* Exercise 2: install a linter
+* Your 5-minute exercise: use the shablona template for a project
 
 ---
