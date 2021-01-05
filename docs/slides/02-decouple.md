@@ -63,6 +63,9 @@ This is a callback for a function in a GUI for spike sorting.
 
 > In computer science, an operation, function or expression is said to have a side effect if it modifies some state variable value(s) outside its local environment, that is to say has an observable effect besides returning a value (the main effect) to the invoker of the operation. State data updated "outside" of the operation may be maintained "inside" a stateful object or a wider stateful system within which the operation is performed. Example side effects include modifying a non-local variable, modifying a static local variable, modifying a mutable argument passed by reference, performing I/O or calling other side-effect functions. (Wikipedia)
 
+# Side effects
+
+![From Wikipedia](../figures/Design_by_contract.svg.png){height=220px}
 
 # A function with side effects
 
@@ -127,3 +130,4 @@ $$CKA(\mathbf X, \mathbf Y) = \frac{||\mathbf X^T \mathbf Y||_2^2}{||\mathbf X^T
 * Keep things decoupled
 * By keeping things decoupled, you can think about one part of your program at a time
 * Save your WM slots
+* Your 5-minute exercise: take existing piece of code and wrap it in main
