@@ -8,7 +8,7 @@ import pandas as pd
 import pickle
 
 
-def cka(reps: List[np.array]) -> np.array:
+def multi_cka(reps: List[np.array]) -> np.array:
     """
     Calculate CKA matrix for a list of matrices.
 
@@ -47,7 +47,7 @@ def main():
     with open ('../data/matrices.pkl', 'rb') as f:
         data = pickle.load(f)
 
-    C = cka(data['reps'])
+    C = multi_cka(data['reps'])
 
     df = pd.DataFrame(C)
     df.index = data['models']
