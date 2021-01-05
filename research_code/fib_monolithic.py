@@ -1,5 +1,13 @@
 memory = {}
 
+"""
+The N'th Fibonacci number is 
+
+F(n) = F(n-1) + F(n-2)
+
+with F(0) = 1, F(1) = 1
+"""
+
 def fib(n):
     global memory
     if n not in memory:
