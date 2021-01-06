@@ -23,3 +23,7 @@ Slides can be compiled with ./compile-all.sh
 # Inspiration
 
 * The Zen of Python: https://zen-of-python.info/
+
+# Tools
+
+* [IDEs for scientific Python](https://xcorr.net/2013/04/17/evaluating-ides-for-scientific-python/)
