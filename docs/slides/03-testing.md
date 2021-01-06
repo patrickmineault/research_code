@@ -101,11 +101,26 @@ $ nosetests
 
 # An integration test
 
-![ S1 in Mineault et al. 2011](../figures/mineault_et_al.png){height=220px}
+![S1 in Mineault et al. 2011](../figures/mineault_et_al.png){height=220px}
 
 # Demo
 
 * Let's code CKA tests
+
+# What we know about CKA
+
+* Only makes sense if two matrices are the same size along the first dimension
+* If $\mathbf{X}$ and $\mathbf{Y}$ are one-dimensional, then $CKA = \rho( \mathbf X, \mathbf Y)^2$.
+* $CKA(\mathbf X, \mathbf X) = 1$
+
+# What we know about CKA
+
+* 2.3 invariant to isotropic scaling, $CKA(\alpha \mathbf X, \beta \mathbf Y) = CKA(\mathbf X, \mathbf Y)$
+* 2.2 invariant to rotations, $CKA(\alpha \mathbf{X U}, \beta \mathbf{Y V}) = CKA(\mathbf X, \mathbf Y)$
+* 2.1 _not_ invariant to non-isotropic scaling
+
+![Invariance to rotation](../figures/invariance_to_ortho.PNG)
+
 
 # More things!
 
