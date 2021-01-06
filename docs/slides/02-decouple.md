@@ -124,6 +124,10 @@ $$CKA(\mathbf X, \mathbf Y) = \frac{||\mathbf X^T \mathbf Y||_2^2}{||\mathbf X^T
 # Live coding!
 
 
+# Configuration
+
+* Keep your configuration our of your code
+* Use `argparse` to specify options via the command or `python-dotenv` to store secrets in a `.env` file.
 
 # Lesson 2
 
