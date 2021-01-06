@@ -50,7 +50,7 @@
 
 * Assume that you know a little bit about Python, git and the command line
   * If you don't, that's ok! This is vertically integrated advice. Get inspired, follow more detailed tutorials after, and come back to this.
-* 6 easy steps to better code
+* 5 easy steps to better code
   * Concrete examples
   * Interactive sessions (zoom chat)
   * 5-minute action items
