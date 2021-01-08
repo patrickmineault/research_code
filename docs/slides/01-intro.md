@@ -6,9 +6,9 @@
 
 ---
 
-# 
+# Who is this lecture for?
 
-![We've all been there](../figures/tweet.png)
+![](../figures/tweet.png)
 
 # Who is this lecture for?
 
@@ -58,19 +58,13 @@
 * Roadmap to self-improvement & extra resources
 * But first, I will indulge in theory...
 
----
-
-# Thesis
-
 # Thesis
 
 Writing good research code boils down to saving your memory - both working and long-term.
 
 # Coding is very working-memory intensive
 
-![Code and working memory in the brain [^1]](../figures/wm-federenko.png)
-
-[^1]: Ivanova et al. (2020)
+![Code and working memory in the brain, Ivanova et al. (2020)](../figures/wm-federenko.png)
 
 # Coding is very working-memory intensive
 
@@ -112,7 +106,9 @@ You will get [overloaded](https://imgur.com/gallery/UNhWQiV).
 
 ---
 
-# Practical Lessons
+# 
+
+Practical Lessons
 
 # Disclaimer: this is a low-judgement zone
 
@@ -138,14 +134,14 @@ You will get [overloaded](https://imgur.com/gallery/UNhWQiV).
 
 * Consensus: one repo = one project $\approx$ one paper
 * Lots of templates around:
-  * [Turing Way](https://the-turing-way.netlify.app/reproducible-research/compendia.html#executable-compendium]
+  * [Turing Way](https://the-turing-way.netlify.app/reproducible-research/compendia.html#executable-compendium)
   * [Research Software Engineering with Python](https://merely-useful.github.io/py-rse/getting-started.html#getting-started-structure)
   * [Python package best practices](https://education.molssi.org/python-package-best-practices/01-package-setup/index.html)
   * [Shablona](https://github.com/uwescience/shablona)
 
 # Shablona
 
-![Shablona](../figures/shablona.png)
+![Shablona](../figures/shablona.png){height=220px}
 
 # Shablona
 
