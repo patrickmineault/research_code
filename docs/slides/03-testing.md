@@ -4,7 +4,7 @@
 
 # Bulding around testing
 
-> Most scientists who write software constantly test their code. That is, if you are a scientist writing software, I am sure that you have tried to see how well your code works by running every new function you write, examining the inputs and the outputs of the function, to see if the code runs properly (without error), and to see whether the results make sense. Automated code testing takes this informal practice, makes it formal, and automates it, so that you can make sure that your code does what it is supposed to do, even as you go about making changes around it. (Ariel Rokem, Shablona README)
+> Most scientists who write software constantly test their code. That is, if you are a scientist writing software, I am sure that you have tried to see how well your code works by running every new function you write, examining the inputs and the outputs of the function, to see if the code runs properly (without error), and to see whether the results make sense. Automated code testing takes this informal practice, makes it formal, and automates it, so that you can make sure that your code does what it is supposed to do, even as you go about making changes around it. --Ariel Rokem, Shablona README
 
 # Open discussion
 
@@ -103,6 +103,23 @@ Let's code up `fib.py` tests!
 * Regression tests
 * E2E (literally a robot clicking buttons)
 
+# Write lots of tiny unit tests that run very quickly
+
+* Goal: each unit test should run in 1 ms.
+* The faster you iterate, the more your WM.
+    * If your test suite takes more than 5 seconds to run, you will be tempted to
+    go do something else.
+
+# Open discussion
+
+Q: what do you think is the ratio of unit tests to real code in a real codebase?
+
+# Open discussion
+
+A: 1:1 to 3:1, but can be many, many times that in safety critical applications
+
+e.g. the aviation standard DO-178C requires 100% code coverage at its third highest safety level (Level C).
+
 # An integration test
 
 - E.g. I write a spiffy function that fits a GLM with L1 regularization
@@ -127,11 +144,12 @@ Let's code up `fib.py` tests!
 
 # What we know about CKA
 
-* 2.3 invariant to isotropic scaling, $CKA(\alpha \mathbf X, \beta \mathbf Y) = CKA(\mathbf X, \mathbf Y)$
-* 2.2 invariant to rotations, $CKA(\alpha \mathbf{X U}, \beta \mathbf{Y V}) = CKA(\mathbf X, \mathbf Y)$
 * 2.1 _not_ invariant to non-isotropic scaling
+* 2.2 invariant to rotations, $CKA(\alpha \mathbf{X U}, \beta \mathbf{Y V}) = CKA(\mathbf X, \mathbf Y)$
 
-![Invariance to rotation](../figures/invariance_to_ortho.PNG)
+![Invariance to rotation](../figures/invariance_to_ortho.PNG){height=85px}
+
+* 2.3 invariant to isotropic scaling, $CKA(\alpha \mathbf X, \beta \mathbf Y) = CKA(\mathbf X, \mathbf Y)$
 
 # Live coding
 
@@ -140,7 +158,6 @@ Let's code up `fib.py` tests!
 # Points from live coding example
 
 * Your test code can be ugly, as long as it's functional!
-* Build around invariants
 * Define boundary conditions, pathological examples
     * Test that bad inputs indeed raise errors! Your code should yell when you feed it bad inputs.
 * Lock in current behaviour for regression testing
@@ -149,12 +166,13 @@ Let's code up `fib.py` tests!
 
 * Your code is ugly: time to refactor!
     1. Your code is ugly, tests pass
-    2. Your code is clean, tests don't pass
-    3. Iterate until tests pass again
+    2. Rewrite the code
+    3. Your code is clean, tests don't pass
+    4. Rewrite the code
+    5. Iterate until tests pass again
 * Much less stressful than without tests
 * Focus on one test at a time with `python test_cka.py TestCka.test_same`
     * Don't forget to run the whole suite at the end!
-
 
 # Advanced topics!
 

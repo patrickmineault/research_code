@@ -19,7 +19,7 @@ Keep things decoupled
 
 # Sample code
 
-[Code here](https://github.com/csn-le/wave_clus/blob/master/wave_clus.m#L964).
+[Link](https://github.com/csn-le/wave_clus/blob/master/wave_clus.m#L964).
 
 # What's going here?
 
@@ -56,8 +56,6 @@ This is a callback for a function in a GUI for spike sorting.
     - Make functions which are small
         - a screen's worth, 80 columns, 50 lines
 - Avoid side effects, prefer pure functions
-
-
 
 # What's a side effect?
 
@@ -111,10 +109,9 @@ Let's de-couple CKA!
 
 # Centered kernel alignment
 
-![CKA example: alignment of one neural net initiated with two different seeds](../figures/cka_example.png)
+[Kornblith et al. (2019)](https://arxiv.org/abs/1905.00414). Compare representation of two systems, e.g. a brain and a deep neural net, or the layers of two deep neural nets.
 
-* [Kornblith et al. (2019)](https://arxiv.org/abs/1905.00414)
-* Allows comparison of the representations of two systems, e.g. a brain and a deep neural net, or two deep neural nets
+![Alignment between layers of two neural nets initialized with different seeds](../figures/cka_example.png){height=100px}
 
 # Centered kernel alignment
 

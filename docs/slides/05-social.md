@@ -1,4 +1,4 @@
-% Social programming
+% Improving your skillset
 % Programming good research code good
 % Patrick Mineault
 
@@ -40,14 +40,18 @@ Work with better people than you
     - [Hackerspaces](https://wiki.hackerspaces.org/w/index.php)
     - [PyLadies](https://www.pyladies.com/)
 
-# Become a wized!
+# Become a wizard!
 
-![Julia Evans, released under CC-BY-NC-SA 4.0 license](../figures/wizard.png){height=220px}
+![zine by Julia Evans, released under CC-BY-NC-SA 4.0 license](../figures/wizard.png){height=220px}
 
 # Wizard!
 
 - Great zine about how to become a wizard from [Julia Evans](https://www.twitter.com/b0rk)
 - [Zine link](https://wizardzines.com/comics/take-on-hard-projects/)
+
+# You are never finished learning!
+
+![](../figures/reproducible_research.png)
 
 # You can accomplish anything!
 

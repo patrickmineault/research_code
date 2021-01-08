@@ -2,9 +2,9 @@
 % Programming good research code good
 % Patrick Mineault
 
-# Intro
+# 
 
----
+Intro
 
 # Who is this lecture for?
 
@@ -26,10 +26,7 @@
 
 # My weird perspective
 
-* Patrick Mineault, PhD
-* As a physics & math undergrad, did programming on the side and ran open source project amfphp
-* PhD on receptive fields in early visual cortex at the MNI with Chris Pack
-* Postdoc at UCLA with Dario Ringach
+* Patrick Mineault, PhD in neuroscience
 * (wildly underqualified) software engineer at Google
 * Research scientist at Facebook on brain-computer interfaces
 * Technical chair of Neuromatch Academy
@@ -150,7 +147,9 @@ Practical Lessons
 * [Use as a template to start a new project via big green button](https://github.com/uwescience/shablona)
 * Or build it from scratch to understand the moving pieces
 
-# DEMO
+# 
+
+Live demo
 
 # A note about Python packaging
 
@@ -183,7 +182,7 @@ I can never remember how to setup a Python package from scratch, so I did it onc
 
 * [Numpy style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html) or [Google style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
 
-```{python}
+```{.python}
 def my_doubler(x):
     """Doubles x.
 
@@ -198,9 +197,11 @@ def my_doubler(x):
 
 # IPython notebooks
 
+> if you use notebooks to develop software, you are probably using the wrong tool. -- [Yihui Xie](https://yihui.org/en/2018/09/notebook-war/)
+
 * Notebooks are hard to keep tidy because of nonlinear execution
 * Restart and Run All is your friend
-* Somewhat unpopular opinion: it's ok to write plotting code in a notebook, but don't write real functions.
+* It's ok to write plotting code in a notebook, but don't write real functions.
     * Disclaimer: I write real functions in notebooks all the time, and I know I shouldn't
 
 # Aside: Swim test
@@ -211,6 +212,6 @@ Everything at Google is one giant monorepo with billions of lines of code ([http
 
 * Keep things tidy
 * Free your W&LTM from having to remember where stuff is
-* Your 5-minute exercise: use the shablona template for a project
+* Your 5-minute exercise: use the `shablona` template for a project
 
 ---

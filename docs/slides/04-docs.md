@@ -39,12 +39,13 @@ def conv(A, B, padding='valid'):
 
 # Defensive inline checks
 
-```{.python}
+```{.python }
 def conv(A, B, padding='none'):
-    assert A.ndim == 1
-    assert B.ndim == 1
-    if padding not in ('valid', 'mirror'):
-        raise NotImplementedError(f"{padding} not implemented.")
+  assert A.ndim == 1
+  assert B.ndim == 1
+  if padding not in ('valid', 'mirror'):
+    raise NotImplementedError(
+        f"{padding} not implemented.")
 ```
 
 # What should you document?
@@ -64,7 +65,7 @@ def conv(A, B, padding='none'):
 
 * [Numpy style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html) or [Google style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
 
-```{python}
+```{.python}
 def my_doubler(x):
     """Doubles x.
 
@@ -140,5 +141,4 @@ optional arguments:
 * Write documentation
 * Write the right kind of documentation
 * Save your long-term memory and offload it to digital store
-* Save yourself when you're in a pinch
-* 5-minute exercise: make a README.md file
+* 5-minute exercise: make a README.md file and push it to Github
