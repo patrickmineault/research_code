@@ -118,6 +118,23 @@ optional arguments:
 * I used to have a self-hosted wordpress.org website starting in 2005, it was lost in the sands of time - use a hosted service
 * I have had a [wordpress.com blog](https://xcorr.net) for the last 12 years. Two weeks ago I copied and pasted from a blog post dated 2009.
 
+# Dashboards
+
+* If you have a project that relies on tracking and improving a metric, use a dashboard
+    * Lots of machine learning projects are set up this way 
+* Not only acts as a LTM, acts as an information radiator
+* Many ways to do this (most of these are commercial cloud offerings with a free tier): 
+    * [R Shiny](https://shiny.rstudio.com/)
+    * [Streamlit](https://www.streamlit.io/)
+    * [Panel](https://panel.holoviz.org/)
+    * [Plotly dash](https://plotly.com/dash/)
+    * [Gooogle Data Studio](https://datastudio.google.com/u/0/)
+    * [W&B](https://wandb.ai/)
+
+# Sample dashboard
+
+![NMA dashboard](../figures/dashboard.PNG){height=220px}
+
 # Lesson 4
 
 * Write documentation

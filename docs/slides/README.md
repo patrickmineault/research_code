@@ -1,6 +1,10 @@
 # Slides for writing good research code good
 
-Slides can be compiled with ./compile-all.sh
+* [Introduction and keeping things tidy](01-intro.pdf)
+* [Decoupling code](02-decouple.pdf)
+* [Testing](03-testing.pdf)
+* [Documentation](04-docs.pdf)
+* [Make it social](05-social.pdf)
 
 # References
 
@@ -20,10 +24,19 @@ Slides can be compiled with ./compile-all.sh
 - Software engineering for research: [https://www.youtube.com/watch?v=SxoDCo9iNI0&feature=emb_title](https://www.youtube.com/watch?v=SxoDCo9iNI0&feature=emb_title)
 - Test and code for scientists (podcast): [https://testandcode.com/140](https://testandcode.com/140)
 
-# Inspiration
+## Inspiration
 
 * The Zen of Python: https://zen-of-python.info/
 
-# Tools
+## Tools
 
 * [IDEs for scientific Python](https://xcorr.net/2013/04/17/evaluating-ides-for-scientific-python/)
+
+# Compiling these slides
+
+Slides can be compiled with `./compile-all.sh`. Requires pandoc:
+
+```
+sudo apt-get install pandoc texlive texlive-latex-extra
+pip install pandoc-latex-fontsize
+```

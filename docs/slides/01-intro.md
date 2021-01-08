@@ -149,7 +149,14 @@ Practical Lessons
 * Is compatible with Python packaging. That means you can install locally with `pip install -e .`, and the code inside the special folder (placeholder: `shablona`) becomes a package `shablona`
 * [Use as a template to start a new project via big green button](https://github.com/uwescience/shablona)
 * Or build it from scratch to understand the moving pieces
-* *DEMO*
+
+# DEMO
+
+# A note about Python packaging
+
+I can never remember how to setup a Python package from scratch, so I did it once here:
+
+[https://github.com/patrickmineault/minimal-package](https://github.com/patrickmineault/minimal-package)
 
 # Other conventions
 

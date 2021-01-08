@@ -40,7 +40,11 @@ Work with better people than you
     - [Hackerspaces](https://wiki.hackerspaces.org/w/index.php)
     - [PyLadies](https://www.pyladies.com/)
 
-# Take on hard projects with awesome people to grow your skills
+# Become a wized!
+
+![Julia Evans, released under CC-BY-NC-SA 4.0 license](../figures/wizard.png){height=220px}
+
+# Wizard!
 
 - Great zine about how to become a wizard from [Julia Evans](https://www.twitter.com/b0rk)
 - [Zine link](https://wizardzines.com/comics/take-on-hard-projects/)
