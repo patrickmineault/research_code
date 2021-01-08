@@ -6,9 +6,10 @@
 
 > Most scientists who write software constantly test their code. That is, if you are a scientist writing software, I am sure that you have tried to see how well your code works by running every new function you write, examining the inputs and the outputs of the function, to see if the code runs properly (without error), and to see whether the results make sense. Automated code testing takes this informal practice, makes it formal, and automates it, so that you can make sure that your code does what it is supposed to do, even as you go about making changes around it. (Ariel Rokem, Shablona README)
 
-# Demo
+# Open discussion
 
 * Let's test `fib.py`
+* What can we test?
 
 # What can we test about `fib`?
 
@@ -75,11 +76,22 @@ if __name__ == '__main__':
 $ python test_something.py
 ```
 
-Or using nose:
+To run all tests within a directory:
 
 ```{.shell}
 $ nosetests
 ```
+
+# Live coding
+
+Let's code up `fib.py` tests!
+
+# Points from live coding example
+
+* Paths!
+    * Sometimes you can get away with hacking `sys.path`
+    * Ideally, set up a package with `pip install -e .`
+* There's a lot of cruft: no shame in copy and paste!
 
 # A hierarchy of tests can be run with a runner
 
@@ -121,14 +133,37 @@ $ nosetests
 
 ![Invariance to rotation](../figures/invariance_to_ortho.PNG)
 
+# Live coding
 
-# More things!
 
-* Testing computational code has a very high returns:effort ratio, but...
+
+# Points from live coding example
+
+* Your test code can be ugly, as long as it's functional!
+* Build around invariants
+* Define boundary conditions, pathological examples
+    * Test that bad inputs indeed raise errors! Your code should yell when you feed it bad inputs.
+* Lock in current behaviour for regression testing
+
+# Refactoring with confidence
+
+* Your code is ugly: time to refactor!
+    1. Your code is ugly, tests pass
+    2. Your code is clean, tests don't pass
+    3. Iterate until tests pass again
+* Much less stressful than without tests
+* Focus on one test at a time with `python test_cka.py TestCka.test_same`
+    * Don't forget to run the whole suite at the end!
+
+
+# Advanced topics!
+
+* Testing deterministic side-effect free computational code has a very high returns:effort ratio, but...
 * [You can also test data loaders for correctness](https://github.com/patrickmineault/brain-scorer/blob/main/tests/test_pvc4_loader.py).
 * [You can also test data for correctness](https://github.com/patrickmineault/phaco-meta/blob/master/read-data.R#L320)
 * [You can also test notebooks for correctness](https://github.com/NeuromatchAcademy/course-content/blob/master/ci/verify_exercises.py#L56)
 * [You can integrate your tests into Github](https://github.com/patrickmineault/research_code/runs/1647753165?check_suite_focus=true)
+* [You can test stochastic functions](https://softwareengineering.stackexchange.com/questions/133047/unit-testing-of-inherently-random-non-deterministic-algorithms?rq=1)
 
 # Lesson 3
 

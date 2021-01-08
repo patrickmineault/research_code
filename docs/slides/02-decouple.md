@@ -111,7 +111,13 @@ Let's de-couple CKA!
 
 # Centered kernel alignment
 
-* Let's compare the responses of two systems, e.g. a brain and a deep neural net
+![CKA example: alignment of one neural net initiated with two different seeds](../figures/cka_example.png)
+
+* [Kornblith et al. (2019)](https://arxiv.org/abs/1905.00414)
+* Allows comparison of the representations of two systems, e.g. a brain and a deep neural net, or two deep neural nets
+
+# Centered kernel alignment
+
 * Same number of stimuli $n$, potentially different numbers of features
 * Let's collect the responses of each system into matrices $\mathbf{X}, \mathbf{Y}$, each $n$ high. 
 * Center $\mathbf{X}, \mathbf{Y}$ so each column has 0 mean, then:
@@ -123,6 +129,15 @@ $$CKA(\mathbf X, \mathbf Y) = \frac{||\mathbf X^T \mathbf Y||_2^2}{||\mathbf X^T
 
 # Live coding!
 
+
+
+# Points from live coding example
+
+* Often, analysis scripts have a clear flow from inputs to computation to outputs
+* Put the controller in the `main` function, hide behind `__name__ == "__main__"`
+    * Avoids module variables in Python
+    * Makes the code importable
+* Isolate the computation in its own function independent of IO
 
 # Configuration
 
