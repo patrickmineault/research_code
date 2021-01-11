@@ -158,7 +158,7 @@ I can never remember how to setup a Python package from scratch, so I did it onc
 
 [https://github.com/patrickmineault/minimal-package](https://github.com/patrickmineault/minimal-package)
 
-[Here is a long-form explanation about how packages really work (useful if you run into trouble)](../slides/notes/how_packages_work.md).
+[Here is a long-form explanation about how packages really work (useful if you run into trouble)](../notes/how_packages_work.md).
 
 # Other conventions
 
