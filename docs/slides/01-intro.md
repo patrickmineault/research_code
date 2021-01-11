@@ -144,6 +144,7 @@ Practical Lessons
 
 * Keeps docs, data, scripts and code tidy and in their own little box
 * Is compatible with Python packaging. That means you can install locally with `pip install -e .`, and the code inside the special folder (placeholder: `shablona`) becomes a package `shablona`
+* You can `import shablona` to access the code in the packages
 * [Use as a template to start a new project via big green button](https://github.com/uwescience/shablona)
 * Or build it from scratch to understand the moving pieces
 
@@ -151,11 +152,13 @@ Practical Lessons
 
 Live demo
 
-# A note about Python packaging
+# Packages, how do they work?
 
 I can never remember how to setup a Python package from scratch, so I did it once here:
 
 [https://github.com/patrickmineault/minimal-package](https://github.com/patrickmineault/minimal-package)
+
+[Here is a long-form explanation about how packages really work (useful if you run into trouble)](../slides/notes/how_packages_work.md).
 
 # Other conventions
 
