@@ -129,7 +129,7 @@ optional arguments:
     * [Streamlit](https://www.streamlit.io/)
     * [Panel](https://panel.holoviz.org/)
     * [Plotly dash](https://plotly.com/dash/)
-    * [Gooogle Data Studio](https://datastudio.google.com/u/0/)
+    * [Google Data Studio](https://datastudio.google.com/u/0/)
     * [W&B](https://wandb.ai/)
 
 # Sample dashboard

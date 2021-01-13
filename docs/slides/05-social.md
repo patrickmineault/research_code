@@ -26,8 +26,15 @@ Work with better people than you
 
 * Open an issue in an open source project
 * Open a PR in an open source project
-* Set up pair programming with people in your lab
-* Set up a review circle
+* Set up pair programming with people in your lab or study group
+    * One person drives, one person co-pilots
+    * Learn how at NMA2021!
+    * [CoCalc](https://cocalc.com/) and [DeepNote](https://deepnote.com/) can do this remotely.
+
+# Set up a review circle
+
+[You can use Github Pull Requests to give and receive line-by-line feedback on code](https://docs.github.com/en/enterprise-server@2.20/github/collaborating-with-issues-and-pull-requests/reviewing-proposed-changes-in-a-pull-request).
+
 
 # It doesn't have to be lonely
 

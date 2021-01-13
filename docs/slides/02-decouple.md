@@ -67,13 +67,24 @@ This is a callback for a function in a GUI for spike sorting.
 
 # A function with side effects
 
+Q: what will be printed?
+
 ```{.python}
 def reversi(arr):
     """Reverses a list."""
     for i in range(len(arr) // 2):
-        arr[-i - 1] = arr[i]
+        arr[-i - 1], arr[i] = arr[i], arr[-i - 1]
     return arr
+
+>>> a = [0, 1, 2]
+>>> b = reversi(a)
+>>> print(b)
+>>> print(a)
 ```
+
+# A function which changes its arguments
+
+![This function mutates its arguments](../figures/reversi.PNG)
 
 # Side effects
 
@@ -88,6 +99,7 @@ def reversi(arr):
 * Need to know state of function to understand it
 * Hard to test
 * Let's box them
+    * You can use closures or classes to encapsulate state
 
 # Demo
 
@@ -107,11 +119,25 @@ def reversi(arr):
 
 Let's de-couple CKA!
 
-# Centered kernel alignment
+# Background on centered kernel alignment
 
-[Kornblith et al. (2019)](https://arxiv.org/abs/1905.00414). Compare representation of two systems, e.g. a brain and a deep neural net, or the layers of two deep neural nets.
+Q: how can we compare how different brain areas and artificial neural networks represent the world?
+
+A: Choose a standard battery of stimuli, measure responses across systems, compare the responses between the systems. Many approaches, including: 
+
+* forward encoding models (e.g. ridge regression)
+* canonical correlation analysis (CCA)
+* representational similarity analysis (RSA). 
+
+# CKA
+
+[Kornblith et al. (2019)](https://arxiv.org/abs/1905.00414) propose a new method to compare representations. You can think of it as a generalization of the (square of the) Pearson correlation coefficient, but with matrices instead of vectors.
 
 ![Alignment between layers of two neural nets initialized with different seeds](../figures/cka_example.png){height=100px}
+
+Importantly for us, this method is not implemented in scipy, or sklearn, or PyMVPA, and github gives very few hits...
+
+...this is real research code!
 
 # Centered kernel alignment
 
@@ -123,6 +149,7 @@ $$CKA(\mathbf X, \mathbf Y) = \frac{||\mathbf X^T \mathbf Y||_2^2}{||\mathbf X^T
 
 * Min 0, max 1
 * Check: if $\mathbf{X}$ and $\mathbf{Y}$ are one-dimensional, then $CKA = \rho( \mathbf X, \mathbf Y)^2$.
+
 
 # Live coding!
 
@@ -139,11 +166,26 @@ $$CKA(\mathbf X, \mathbf Y) = \frac{||\mathbf X^T \mathbf Y||_2^2}{||\mathbf X^T
 # Configuration
 
 * Keep your configuration our of your code
-* Use `argparse` to specify options via the command or `python-dotenv` to store secrets in a `.env` file.
+    * Use `argparse` to specify options via the command line
+    * Keep configuration options located in an importable `config.py` file
+    * Use `python-dotenv` to store secrets in a `.env` file
+
+# You can apply this advice at a project-wide level as well
+
+Advice from [van Vliet (2020)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007358):
+
+1. **Each analysis step is one script**
+2. **A script either processes a single experimental replicate, or aggregates across replicates, never both.**
+3. One master script to run the entire analysis
+4. **Save all intermediate results**
+5. Visualize all intermediate results
+6. **Each parameter and filename is defined only once**
+7. Distinguish files that are a part of the official pipeline
+
 
 # Lesson 2
 
 * Keep things decoupled
 * By keeping things decoupled, you can think about one part of your program at a time
 * Save your WM slots
-* Your 5-minute exercise: take existing piece of code and wrap it in main
+* Your 5-minute exercise: take existing code and wrap it in `main`

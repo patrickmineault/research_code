@@ -52,9 +52,9 @@ if __name__ == '__main__':
 
 # Use a test suite
 
-* Create a specialized file of tests that runs with the help of a runner.
+* Create a specialized file with tests that run with the help of a runner.
 * There's `pytest` and `unittest`.
-* I use `unittest` because that's what I learned, and it's built in.
+* I use `unittest` because that's what I learned, and it's built-in.
 
 # Basic template
 
@@ -91,13 +91,13 @@ Let's code up `fib.py` tests!
 * Paths!
     * Sometimes you can get away with hacking `sys.path`
     * Ideally, set up a package with `pip install -e .`
-* There's a lot of cruft: no shame in copy and paste!
+* There's a lot of cruft in writing tests: no shame in copy and paste!
 
 # A hierarchy of tests can be run with a runner
 
 * Static tests (literally your editor parsing your code to figure if it will crash)
 * Asserts
-* Unit tests (what we just saw)
+* Unit tests (test one function = one unit; what we just saw)
 * Integration tests
 * Smoke tests
 * Regression tests
@@ -112,25 +112,13 @@ Let's code up `fib.py` tests!
 
 # Open discussion
 
-Q: what do you think is the ratio of unit tests to real code in a real codebase?
+Q: what do you think is the ratio of test code to real code in a real codebase?
 
 # Open discussion
 
 A: 1:1 to 3:1, but can be many, many times that in safety critical applications
 
 e.g. the aviation standard DO-178C requires 100% code coverage at its third highest safety level (Level C).
-
-# An integration test
-
-- E.g. I write a spiffy function that fits a GLM with L1 regularization
-- How do I test that?
-    - I make up some test data
-    - I run my model
-    - It gives me the correct outputs
-
-# An integration test
-
-![S1 in Mineault et al. 2011](../figures/mineault_et_al.png){height=220px}
 
 # Demo
 
@@ -173,6 +161,7 @@ e.g. the aviation standard DO-178C requires 100% code coverage at its third high
 * Much less stressful than without tests
 * Focus on one test at a time with `python test_cka.py TestCka.test_same`
     * Don't forget to run the whole suite at the end!
+
 
 # Advanced topics!
 

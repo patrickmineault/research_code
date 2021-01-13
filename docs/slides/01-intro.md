@@ -112,6 +112,7 @@ Practical Lessons
 - It's ok to write garbage code when you're in a rush
 - It's not ok to keep building more and more on top of garbage code
     - sure, there's the moral imperative to create replicable code to bring forward the shining light of science and truth...
+    - [and yes, people have messed up the world real bad](https://www.nytimes.com/2013/04/19/opinion/krugman-the-excel-depression.html) by doing things fast and loose
     - but also, do you want to scrap 6 months of research because you forgot to transpose a matrix?
     - you will get bitten back
 - Guidelines not rules
@@ -125,6 +126,7 @@ Practical Lessons
 * Project folder structure
 * Code style
 * Notebooks
+* Scripts
 * Prereq: Git & Github: if you're going to keep things clean, you will mess up and need a time machine.
 
 # Project folder structure
@@ -166,6 +168,22 @@ I can never remember how to setup a Python package from scratch, so I did it onc
 - Reusable functions and packages, etc. → `snake_case.py`
 - Tests under `tests` folder
 
+# Organizing scripts
+
+![From [Van Vliet (2020)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007358)](../figures/pcbi.1007358.g002.PNG_L.png){height=220px}
+
+# Organizing scripts
+
+* Use filenames that indicate hierarchy, e.g. `00_fetch_data.py`
+  * One issue: you can't `import` these scripts because you can't start a module name with a digit.
+  * Start with an underscore, `_00_fetch_data.py`, or with a prefix, `step_00_fetch_data.py`, those are valid module names
+* Figure code separate from processing steps code, e.g. `figure_csd.py`
+* Use a master script to bind everything together
+  * Plain Python
+  * Bash files
+  * Build tools: `make`, `doit`
+  * Specialized tools like `nipype`
+
 # Code style
 
 * Use a consistent style
@@ -204,10 +222,15 @@ def my_doubler(x):
 
 * Notebooks are hard to keep tidy because of nonlinear execution
 * Restart and Run All is your friend
+* If your notebook doesn't run top to bottom - it's not reproducible
 * It's ok to write plotting code in a notebook, but don't write real functions.
     * Disclaimer: I write real functions in notebooks all the time, and I know I shouldn't
 
-# Aside: Swim test
+# But why does this all matter?
+
+You don't have to constantly ask yourself where stuff is, how you should do thing X, etc. and that allows you to focus on the stuff that matters.
+
+# Aside: day 3
 
 Everything at Google is one giant monorepo with billions of lines of code ([https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext#FNE](https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext#FNE). By ~day 3, it was time to go do a code. Everything is organized according to strict [conventions](https://github.com/google/styleguide/blob/gh-pages/pyguide.md), so it's not that bad to jump in. 
 
