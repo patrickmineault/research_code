@@ -1,5 +1,5 @@
 % Testing
-% Programming good research code good
+% Good research code
 % Patrick Mineault
 
 # Bulding around testing
@@ -106,7 +106,7 @@ Let's code up `fib.py` tests!
 # Write lots of tiny unit tests that run very quickly
 
 * Goal: each unit test should run in 1 ms.
-* The faster you iterate, the more your WM.
+* The faster you iterate, the better for your WM.
     * If your test suite takes more than 5 seconds to run, you will be tempted to
     go do something else.
 
@@ -122,15 +122,19 @@ e.g. the aviation standard DO-178C requires 100% code coverage at its third high
 
 # Demo
 
-* Let's code CKA tests
+Let's code CKA tests. We will turn properties of CKA listed in the paper into tests.
 
 # What we know about CKA
 
 * Only makes sense if two matrices are the same size along the first dimension
-* If $\mathbf{X}$ and $\mathbf{Y}$ are one-dimensional, then $CKA = \rho( \mathbf X, \mathbf Y)^2$.
+* Pearson correlation: If $\mathbf{X}$ and $\mathbf{Y}$ are one-dimensional, then $CKA = \rho( \mathbf X, \mathbf Y)^2$.
 * $CKA(\mathbf X, \mathbf X) = 1$
 
-# What we know about CKA
+# Live coding
+
+
+
+# What else can we know about CKA? Let's read the paper!
 
 * 2.1 _not_ invariant to non-isotropic scaling
 * 2.2 invariant to rotations, $CKA(\alpha \mathbf{X U}, \beta \mathbf{Y V}) = CKA(\mathbf X, \mathbf Y)$
@@ -139,7 +143,8 @@ e.g. the aviation standard DO-178C requires 100% code coverage at its third high
 
 * 2.3 invariant to isotropic scaling, $CKA(\alpha \mathbf X, \beta \mathbf Y) = CKA(\mathbf X, \mathbf Y)$
 
-# Live coding
+# Live coding (II)
+
 
 
 
@@ -158,14 +163,15 @@ e.g. the aviation standard DO-178C requires 100% code coverage at its third high
     3. Your code is clean, tests don't pass
     4. Rewrite the code
     5. Iterate until tests pass again
-* Much less stressful than without tests
+* Much less stressful with tests and git
 * Focus on one test at a time with `python test_cka.py TestCka.test_same`
     * Don't forget to run the whole suite at the end!
 
 
 # Advanced topics!
 
-* Testing deterministic side-effect free computational code has a very high returns:effort ratio, but...
+Testing deterministic side-effect free computational code has a very high returns:effort ratio, but...
+
 * [You can also test data loaders for correctness](https://github.com/patrickmineault/brain-scorer/blob/main/tests/test_pvc4_loader.py).
 * [You can also test data for correctness](https://github.com/patrickmineault/phaco-meta/blob/master/read-data.R#L320)
 * [You can also test notebooks for correctness](https://github.com/NeuromatchAcademy/course-content/blob/master/ci/verify_exercises.py#L56)

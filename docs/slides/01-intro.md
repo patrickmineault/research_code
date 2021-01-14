@@ -1,5 +1,5 @@
 % Intro
-% Programming good research code good
+% Good research code
 % Patrick Mineault
 
 # 
@@ -30,34 +30,31 @@ Intro
 * (wildly underqualified) software engineer at Google
 * Research scientist at Facebook on brain-computer interfaces
 * Technical chair of Neuromatch Academy
-* Occasionally taught CS
 * Independent researcher and technologist
+* Occasionally taught CS
 
 # Regrets, I've had a few
 
 * Mostly self-taught in programming
 * Didn't study CS until very late
 * Wasted months working with bad code of my own making
-* Wasn't until I joined Google that I became gooder at code
-* I stand on the shoulders of giants who showed me the error of my ways
 * Not a great coder, but better than in grad school
 * I think you might be curious
 
 # Organization
 
 * Assume that you know a little bit about Python, git and the command line
-  * If you don't, that's ok! This is vertically integrated advice. Get inspired, follow more detailed tutorials after, and come back to this.
-* 5 easy steps to better code
-  * Concrete examples
-  * Interactive sessions (zoom chat)
-  * 5-minute action items
-  * Everybody leaves having learned an actionable thing 
-* Roadmap to self-improvement & extra resources
+    * If you don't, that's ok! This is vertically integrated advice. Get inspired, follow more detailed tutorials after, and come back to this.
+* 5 practical tips to better code
+    * Concrete examples
+    * 5-minute action items
+    * Everybody leaves having learned an actionable thing
+* Interrupt me and chat!
 * But first, I will indulge in theory...
 
-# Thesis
+# Open question
 
-Writing good research code boils down to saving your memory - both working and long-term.
+Q: What does coding look like in the brain?
 
 # Coding is very working-memory intensive
 
@@ -70,6 +67,15 @@ Writing good research code boils down to saving your memory - both working and l
 * SP: sentence programming
 * SR: sentence reading
 * NR: non-word reading
+
+# Consequence
+
+You will get [overloaded](https://imgur.com/gallery/UNhWQiV).
+
+# Principle 1: conserve your WM
+
+- Reduce the cognitive load of understanding your code
+- [Simple is better than complex. Complex is better than complicated.](https://zen-of-python.info/simple-is-better-than-complex.html#3)
 
 # Research code is very LTM-intensive
 
@@ -87,19 +93,14 @@ Writing good research code boils down to saving your memory - both working and l
 - Sometimes, there are manual steps involving human judgement
 - You have to remember all the dead ends for the code to even make sense
 
-# Consequence
-
-You will get [overloaded](https://imgur.com/gallery/UNhWQiV).
-
-# Principle 1: conserve your WM
-
-- Reduce the cognitive load of understanding your code
-- [Simple is better than complex. Complex is better than complicated.](https://zen-of-python.info/simple-is-better-than-complex.html#3)
-
 # Principle 2: write for your future self in mind
 
 - Future you will have forgotten 90% of what you wrote
 - Kernighan's Law - Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.
+
+# Thesis
+
+Writing good research code boils down to saving your memory - both working and long-term.
 
 ---
 
@@ -158,9 +159,9 @@ Live demo
 
 I can never remember how to setup a Python package from scratch, so I did it once here:
 
-[https://github.com/patrickmineault/minimal-package](https://github.com/patrickmineault/minimal-package)
+* [https://github.com/patrickmineault/minimal-package](https://github.com/patrickmineault/minimal-package)
 
-[Here is a long-form explanation about how packages really work (useful if you run into trouble)](../notes/how_packages_work.md).
+[I also wrote a long-form note on how packages really work](../notes/how_packages_work.md).
 
 # Other conventions
 
@@ -197,11 +198,11 @@ I can never remember how to setup a Python package from scratch, so I did it onc
 * There are linters which will catch style issues
   * flake8
   * pylint
-* We'll talk more about the tools in the *use good tools* section.
+* Install them in VSCode
 
 # Comment style
 
-* [Numpy style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html) or [Google style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
+[Numpy style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html) or [Google style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
 
 ```{.python}
 def my_doubler(x):
@@ -218,7 +219,7 @@ def my_doubler(x):
 
 # IPython notebooks
 
-> if you use notebooks to develop software, you are probably using the wrong tool. -- [Yihui Xie](https://yihui.org/en/2018/09/notebook-war/)
+> If you use notebooks to develop software, you are probably using the wrong tool. -- [Yihui Xie](https://yihui.org/en/2018/09/notebook-war/)
 
 * Notebooks are hard to keep tidy because of nonlinear execution
 * Restart and Run All is your friend
@@ -226,13 +227,13 @@ def my_doubler(x):
 * It's ok to write plotting code in a notebook, but don't write real functions.
     * Disclaimer: I write real functions in notebooks all the time, and I know I shouldn't
 
-# But why does this all matter?
+# Why does this matter?
 
 You don't have to constantly ask yourself where stuff is, how you should do thing X, etc. and that allows you to focus on the stuff that matters.
 
 # Aside: day 3
 
-Everything at Google is one giant monorepo with billions of lines of code ([https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext#FNE](https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext#FNE). By ~day 3, it was time to go do a code. Everything is organized according to strict [conventions](https://github.com/google/styleguide/blob/gh-pages/pyguide.md), so it's not that bad to jump in. 
+Everything at Google is one giant monorepo with [billions of lines of code](https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext#FNE). By ~day 3, it was time to go do a code. Everything is organized according to strict [conventions](https://github.com/google/styleguide/blob/gh-pages/pyguide.md), so it's not *that bad* to jump in. 
 
 # Lesson 1
 

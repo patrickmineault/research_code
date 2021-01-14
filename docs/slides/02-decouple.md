@@ -1,3 +1,7 @@
+% Decoupled code
+% Good research code
+% Patrick Mineault
+
 # Lesson 2
 
 Keep things decoupled
@@ -30,31 +34,30 @@ This is a callback for a function in a GUI for spike sorting.
     - Modifies data
     - Reads a jpg file?
 - Uses magic numbers and magic columns
-- Uses various string formatting functions and `exec`
+- Uses various string formatting functions and `eval`
 - Big function
 - Not complex, but it's complicated
 
 # Tightly coupled
 
-- When code is tightly coupled (does a lot of unrelated things at once) it becomes very hard to reason about.
+- When code does a lot of unrelated things at once, it becomes very hard to reason about.
 - Let's say your results are weird, are they weird because...
-    - the data is bad
-    - you're loading the data wrong
-    - your model is incorrectly implemented
-    - your model is inappropriate for the data
-    - you statistical tests are inappropriate for the data distribution
-- Let's say you want to describe to someone what the bug is in your code
+    - the data is bad?
+    - you're loading the data wrong?
+    - your model is incorrectly implemented?
+    - your model is inappropriate for the data?
+    - you statistical tests are inappropriate for the data distribution?
 
 # Uncouple and simplify
 
 - Keep each of the boxes separate with minimal interface
     - Separation of concerns:
-        - example: your data loading function should just load data
+        - Example: your data loading function should just load data
         - Your computation functions shouldn't load data, they should just compute
 - Make each of the boxes small
-    - don't make giant monolithic functions
+    - Don't make giant monolithic functions
     - Make functions which are small
-        - a screen's worth, 80 columns, 50 lines
+        - A screen's worth, 80 columns, 50 lines
 - Avoid side effects, prefer pure functions
 
 # What's a side effect?
@@ -141,8 +144,8 @@ Importantly for us, this method is not implemented in scipy, or sklearn, or PyMV
 
 # Centered kernel alignment
 
-* Same number of stimuli $n$, potentially different numbers of features
-* Let's collect the responses of each system into matrices $\mathbf{X}, \mathbf{Y}$, each $n$ high. 
+* We collect the responses of each system to our battery of $n$ stimuli into matrices $\mathbf{X}, \mathbf{Y}$. 
+* $\mathbf{X}, \mathbf{Y}$ have shape $n x k$, $n x l$, and $k$ and $l$ are not necessarily the same.
 * Center $\mathbf{X}, \mathbf{Y}$ so each column has 0 mean, then:
 
 $$CKA(\mathbf X, \mathbf Y) = \frac{||\mathbf X^T \mathbf Y||_2^2}{||\mathbf X^T \mathbf X||_2 ||\mathbf Y^T \mathbf Y||_2}$$

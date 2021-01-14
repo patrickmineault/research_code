@@ -1,5 +1,5 @@
 % Docs
-% Programming good research code good
+% Good research code
 % Patrick Mineault
 
 # Documentation
@@ -84,15 +84,15 @@ There are other many kinds of *documentation*
 
 # `README.md`
 
-![We survived](../figures/readme.PNG){height=220px}
+![NMC3: We survived](../figures/readme.PNG){height=220px}
 
 # Console usage
 
-![We survived](../figures/argparse.PNG){height=220px}
+![NMC3: We survived](../figures/argparse.PNG){height=220px}
 
 # Console usage
 
-```
+```{.shell}
 (py3) $ python sendit.py
 usage: sendit.py [-h] {list,create,add,templates,test,remove,send} ...
 
@@ -116,8 +116,7 @@ optional arguments:
 
 * I like [notion.so](https://notion.so) as a labbook
 * Blog: jekyll hosted on Github pages or wordpress.com
-* I used to have a self-hosted wordpress.org website starting in 2005, it was lost in the sands of time - use a hosted service
-* I have had a [wordpress.com blog](https://xcorr.net) for the last 12 years. Two weeks ago I copied and pasted from a blog post dated 2009.
+* I have had a [wordpress.com blog](https://xcorr.net) for the last 12 years. Two weeks ago I copied and pasted from a blog post that I wrote in 2009.
 
 # Dashboards
 
@@ -141,4 +140,4 @@ optional arguments:
 * Write documentation
 * Write the right kind of documentation
 * Save your long-term memory and offload it to digital store
-* 5-minute exercise: make a README.md file and push it to Github
+* 5-minute exercise: make a `README.md` file and push it to Github

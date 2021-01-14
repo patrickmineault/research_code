@@ -1,5 +1,5 @@
 % Improving your skillset
-% Programming good research code good
+% Good research code
 % Patrick Mineault
 
 # Lesson 5
@@ -21,6 +21,10 @@ Work with better people than you
     * reading groups
     * retreats
     * performance reviews
+
+# Open discussion
+
+Q: what is pair programming?
 
 # Practical tips
 
