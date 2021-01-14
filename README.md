@@ -1,6 +1,9 @@
-# Writing good research code good
+# Writing good research code
 
-This repo contains example code that illustrates several points in a tutorial on writing good research code good.
+This repo contains the slides and code for a presentation on writing research software I first gave in January 2021 to the PhD students in neuro at Harvard. It's a compendium of 5 lessons I learned the hard way.
+
+* [The slides are here](https://github.com/patrickmineault/research_code/tree/main/docs/slides)
+* The rest of the repo contains supporting code in the format advocated in the first lesson.
 
 ## Organization
 
