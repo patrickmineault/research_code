@@ -43,7 +43,8 @@ Intro
 
 # Organization
 
-* Assume that you know a little bit about Python, git and the command line
+* Assume that you know a little bit about [Python](https://swcarpentry.github.io/python-novice-inflammation/), [git](http://swcarpentry.github.io/git-novice/) and the [command line](http://swcarpentry.github.io/shell-novice/)
+    * You can catch up on these topics via Software Carpentries
     * If you don't, that's ok! This is vertically integrated advice. Get inspired, follow more detailed tutorials after, and come back to this.
 * 5 practical tips to better code
     * Concrete examples
