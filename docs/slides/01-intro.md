@@ -136,7 +136,7 @@ Practical Lessons
 * Lots of templates around:
   * [Turing Way](https://the-turing-way.netlify.app/reproducible-research/compendia.html#executable-compendium)
   * [Research Software Engineering with Python](https://merely-useful.github.io/py-rse/getting-started.html#getting-started-structure)
-  * [Python package best practices](https://education.molssi.org/python-package-best-practices/01-package-setup/index.html)
+  * [Data science cookiecutter](https://drivendata.github.io/cookiecutter-data-science/)
   * [Shablona](https://github.com/uwescience/shablona)
 
 # Shablona
@@ -145,11 +145,12 @@ Practical Lessons
 
 # Shablona
 
+* Lightweight, good starter template
 * Keeps docs, data, scripts and code tidy and in their own little box
-* Is compatible with Python packaging. That means you can install locally with `pip install -e .`, and the code inside the special folder (placeholder: `shablona`) becomes a package `shablona`
 * You can `import shablona` to access the code in the packages
 * [Use as a template to start a new project via big green button](https://github.com/uwescience/shablona)
 * Or build it from scratch to understand the moving pieces
+* **Important**: Is compatible with Python packaging. That means you can install locally with `pip install -e .`, and the code inside the special folder (placeholder: `shablona`) becomes a package `shablona`
 
 # 
 
@@ -157,11 +158,9 @@ Live demo
 
 # Packages, how do they work?
 
-I can never remember how to setup a Python package from scratch, so I did it once here:
+Whatever template you use, make sure it makes a local package for your code that you can `pip install`. That will make it easier to re-use your code in other places.
 
-* [https://github.com/patrickmineault/minimal-package](https://github.com/patrickmineault/minimal-package)
-
-[I also wrote a long-form note on how packages really work](../notes/how_packages_work.md).
+[If you're curious, I wrote a long-form note on how packages really work](../notes/how_packages_work.md).
 
 # Other conventions
 
@@ -182,7 +181,7 @@ I can never remember how to setup a Python package from scratch, so I did it onc
 * Use a master script to bind everything together
   * Plain Python
   * Bash files
-  * Build tools: `make`, `doit`
+  * Build tools: `doit`, `make`
   * Specialized tools like `nipype`
 
 # Code style
@@ -200,7 +199,7 @@ I can never remember how to setup a Python package from scratch, so I did it onc
   * pylint
 * Install them in VSCode
 
-# Comment style
+# Docstrings
 
 [Numpy style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html) or [Google style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
 
@@ -225,7 +224,13 @@ def my_doubler(x):
 * Restart and Run All is your friend
 * If your notebook doesn't run top to bottom - it's not reproducible
 * It's ok to write plotting code in a notebook, but don't write real functions.
-    * Disclaimer: I write real functions in notebooks all the time, and I know I shouldn't
+* Import the code from your installable package (see `shablona` above)
+* You can auto-reload your package code when it changes, makes development easier. In a cell:
+
+```{.python}
+%load_ext autoreload
+%autoreload 2
+```
 
 # Why does this matter?
 

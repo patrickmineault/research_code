@@ -20,6 +20,7 @@ Keep things decoupled
     - has a GUI in Matlab GUIDE
     - GUIDE makes it exceptionally hard to write good code
     - Picked it because it's real code
+- This stuff can happen in Matlab or in Python!
 
 # Sample code
 
@@ -117,6 +118,7 @@ def reversi(arr):
     - Using unnamed dimensions in numpy rather than xarray
     - Using + and bespoke casting for string formatting rather than the one true solution, the f-string
 - Take time to learn more about the language you use
+- Coming from Matlab? I have three tutorials: [[1]](https://xcorr.net/2020/02/21/transitioning-away-from-matlab/), [[2]](https://xcorr.net/2020/02/29/orienting-yourself-through-python/), [[3]](https://xcorr.net/2020/03/04/rewriting-matlab-code-in-python/)
 
 # Enough theory!
 
@@ -138,9 +140,9 @@ A: Choose a standard battery of stimuli, measure responses across systems, compa
 
 ![Alignment between layers of two neural nets initialized with different seeds](../figures/cka_example.png){height=100px}
 
-Importantly for us, this method is not implemented in scipy, or sklearn, or PyMVPA, and github gives very few hits...
+Importantly, CKA is not implemented in scipy or sklearn, github gives very few hits ^[1]... it's real research code!
 
-...this is real research code!
+[1] [There is an implementation in a notebook from authors](https://colab.research.google.com/github/google-research/google-research/blob/master/representation_similarity/Demo.ipynb)
 
 # Centered kernel alignment
 
@@ -154,24 +156,22 @@ $$CKA(\mathbf X, \mathbf Y) = \frac{||\mathbf X^T \mathbf Y||_2^2}{||\mathbf X^T
 * Check: if $\mathbf{X}$ and $\mathbf{Y}$ are one-dimensional, then $CKA = \rho( \mathbf X, \mathbf Y)^2$.
 
 
-# Live coding!
+# Open discussion
 
+Q: What's not ideal about this code? `research_code.cka_not_great.py`
 
+# Pain points
 
-# Points from live coding example
-
-* Often, analysis scripts have a clear flow from inputs to computation to outputs
+* IO, computation and plotting are all in one big blob
+* Solution: isolate the computation in its own function independent of IO
 * Put the controller in the `main` function, hide behind `__name__ == "__main__"`
     * Avoids module variables in Python
     * Makes the code importable
-* Isolate the computation in its own function independent of IO
 
-# Configuration
+# Live coding!
 
-* Keep your configuration our of your code
-    * Use `argparse` to specify options via the command line
-    * Keep configuration options located in an importable `config.py` file
-    * Use `python-dotenv` to store secrets in a `.env` file
+(the result is `cka_step2.py`)
+
 
 # You can apply this advice at a project-wide level as well
 
@@ -184,6 +184,14 @@ Advice from [van Vliet (2020)](https://journals.plos.org/ploscompbiol/article?id
 5. Visualize all intermediate results
 6. **Each parameter and filename is defined only once**
 7. Distinguish files that are a part of the official pipeline
+
+
+# Decoupling configuration
+
+* Keep your configuration our of your code
+    * Use `argparse` to specify options via the command line
+    * Keep configuration options located in an importable `config.py` file
+    * Use `python-dotenv` to store secrets in a `.env` file
 
 
 # Lesson 2

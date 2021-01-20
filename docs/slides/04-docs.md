@@ -52,7 +52,7 @@ def conv(A, B, padding='none'):
 
 * References to papers
 * Why you wrote tricky code the way you did instead of the obvious way
-* TODOs
+* TODOs (your Python editor will highlight these special comments)
 
 ```{.python}
 # TODO(pmin): refactor this mess
@@ -61,7 +61,7 @@ def conv(A, B, padding='none'):
 * Usage, especially if other people will use your code.
 * It's a gift from present you to future you
 
-# How should we document functions?
+# How should we document functions? 
 
 * [Numpy style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html) or [Google style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
 
@@ -77,6 +77,10 @@ def my_doubler(x):
     """
     return x * 2
 ```
+
+# Package docs
+
+If you create a useful package, you can generate docs for it using [Sphinx](https://www.sphinx-doc.org/en/master/index.html) and publish them on [readthedocs](https://readthedocs.org/).
 
 # 
 

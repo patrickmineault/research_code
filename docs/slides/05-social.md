@@ -34,7 +34,7 @@ Q: what is pair programming?
     * One person drives, one person co-pilots
     * Learn how at NMA2021!
     * [CoCalc](https://cocalc.com/) and [DeepNote](https://deepnote.com/) can do this remotely.
-* Set up study groupwith fellow programmers ([event suggestions from Mozilla](http://mozillascience.github.io/studyGroupHandbook/event-types.html)).
+* Set up study group with fellow programmers ([event suggestions from Mozilla](http://mozillascience.github.io/studyGroupHandbook/event-types.html)).
 
 # Set up a review circle
 
@@ -64,6 +64,10 @@ Q: what is pair programming?
 # You are never finished learning!
 
 ![](../figures/reproducible_research.png)
+
+# Acknowledgement
+
+Thanks to the reviewers, Tyler Sloan and Elizabeth DuPre who made this talk much better.
 
 # You can accomplish anything!
 

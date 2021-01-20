@@ -95,11 +95,11 @@ Let's code up `fib.py` tests!
 
 # A hierarchy of tests can be run with a runner
 
-* Static tests (literally your editor parsing your code to figure if it will crash)
+* Static tests (literally your editor parsing your code to figure out if it will crash)
 * Asserts
 * Unit tests (test one function = one unit; what we just saw)
 * Integration tests
-* Smoke tests
+* Smoke tests (does it crash?)
 * Regression tests
 * E2E (literally a robot clicking buttons)
 
@@ -154,6 +154,7 @@ Let's code CKA tests. We will turn properties of CKA listed in the paper into te
 * Define boundary conditions, pathological examples
     * Test that bad inputs indeed raise errors! Your code should yell when you feed it bad inputs.
 * Lock in current behaviour for regression testing
+    * E.g. we implemented a different, faster implementation of CKA in `cka_step4.py` and regression tested it.
 
 # Refactoring with confidence
 
