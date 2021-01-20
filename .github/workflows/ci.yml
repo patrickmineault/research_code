@@ -31,5 +31,5 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Run tests with nose
         run: |
-          pip install nose coverage
-          nosetests --with-coverage --cover-package=research_code
+          pip install nose2 coverage
+          nose2 --with-coverage --cover-package=research_code
