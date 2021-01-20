@@ -29,7 +29,7 @@ jobs:
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
           # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-      - name: Run tests with nose
+      - name: Run tests, measure coverage with nose
         run: |
           pip install nose2 coverage
-          nose2 --with-coverage --cover-package=research_code
+          nose2 --with-coverage --coverage research_code
