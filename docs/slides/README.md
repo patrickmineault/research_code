@@ -1,10 +1,10 @@
 # Slides for writing good research code good
 
-* [Introduction and keeping things tidy](01-intro.pdf)
-* [Decoupling code](02-decouple.pdf)
-* [Testing](03-testing.pdf)
-* [Documentation](04-docs.pdf)
-* [Make it social](05-social.pdf)
+* [Introduction and keeping things tidy](pdf/01-intro.pdf)
+* [Decoupling code](pdf/02-decouple.pdf)
+* [Testing](pdf/03-testing.pdf)
+* [Documentation](pdf/04-docs.pdf)
+* [Make it social](pdf/05-social.pdf)
 
 # References
 
