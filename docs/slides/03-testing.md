@@ -54,7 +54,7 @@ if __name__ == '__main__':
 
 * Create a specialized file with tests that run with the help of a runner.
 * There's `pytest` and `unittest`.
-* I use `unittest` because that's what I learned, and it's built-in.
+* I use `unittest` because that's what I learned, and it's built-in, but people like `pytest` a lot.
 
 # Basic template
 
@@ -76,10 +76,10 @@ if __name__ == '__main__':
 $ python test_something.py
 ```
 
-To run all tests within a directory:
+To run all tests within a directory, install nose via `pip install nose2`, then:
 
 ```{.shell}
-$ nosetests
+$ nose2
 ```
 
 # Live coding
@@ -91,7 +91,7 @@ Let's code up `fib.py` tests!
 * Paths!
     * Sometimes you can get away with hacking `sys.path`
     * Ideally, set up a package with `pip install -e .`
-* There's a lot of cruft in writing tests: no shame in copy and paste!
+* There's a lot of cruft in writing tests: no shame in copy and paste (but do it once from scratch)!
 
 # A hierarchy of tests can be run with a runner
 
@@ -107,8 +107,7 @@ Let's code up `fib.py` tests!
 
 * Goal: each unit test should run in 1 ms.
 * The faster you iterate, the better for your WM.
-    * If your test suite takes more than 5 seconds to run, you will be tempted to
-    go do something else.
+    * If your test suite takes more than 5 seconds to run, you will be tempted to go do something else.
 
 # Open discussion
 
@@ -118,7 +117,9 @@ Q: what do you think is the ratio of test code to real code in a real codebase?
 
 A: 1:1 to 3:1, but can be many, many times that in safety critical applications
 
-e.g. the aviation standard DO-178C requires 100% code coverage at its third highest safety level (Level C).
+e.g. the aviation standard DO-178C requires 100% code coverage (percentage of lines of code called by the tests) at its third highest safety level (Level C).
+
+For more down-to-earth applications, 80% code coverage is a common target. [You can use the `Coverage.py` package to figure out your test coverage](https://coverage.readthedocs.io/en/coverage-5.3.1/).
 
 # Demo
 
@@ -154,7 +155,7 @@ Let's code CKA tests. We will turn properties of CKA listed in the paper into te
 * Define boundary conditions, pathological examples
     * Test that bad inputs indeed raise errors! Your code should yell when you feed it bad inputs.
 * Lock in current behaviour for regression testing
-    * E.g. we implemented a different, faster implementation of CKA in `cka_step4.py` and regression tested it.
+    * E.g. we implement a different, faster implementation of CKA in `cka_step4.py` and regression test it.
 
 # Refactoring with confidence
 
@@ -177,12 +178,13 @@ Testing deterministic side-effect free computational code has a very high return
 * [You can also test data for correctness](https://github.com/patrickmineault/phaco-meta/blob/master/read-data.R#L320)
 * [You can also test notebooks for correctness](https://github.com/NeuromatchAcademy/course-content/blob/master/ci/verify_exercises.py#L56)
 * [You can integrate your tests into Github](https://github.com/patrickmineault/research_code/runs/1647753165?check_suite_focus=true)
+    * [This presentation's repo has CI](https://github.com/patrickmineault/research_code/actions)! It's completely unnecessary!
 * [You can test stochastic functions](https://softwareengineering.stackexchange.com/questions/133047/unit-testing-of-inherently-random-non-deterministic-algorithms?rq=1)
 
 # Lesson 3
 
 * Test your code
 * Free your WM from having to consider that a piece of code unrelated to the thing you care about is broken
-* From lesson 1: much simpler to refactor code to make it tidy when you know you have a test scaffold which catch mistakes
+* From lesson 1: much simpler to refactor code to make it tidy when you know you have a test scaffold which catches mistakes
 * From lesson 2: you will have to decouple code to write tests
-* Your 5-minute assignment: find a commented-out print statement in your code and replace it with `assert`
+* Your 5-minute assignment: find a commented-out `print` statement in your code and replace it with `assert`

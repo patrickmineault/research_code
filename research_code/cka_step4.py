@@ -7,26 +7,66 @@ import numpy as np
 import pandas as pd
 import pickle
 
-def cka(X, Y):
-    """
-    Calculate CKA for two matrices
 
-    Use a non-naive algorithm involving the SVD. This is faster when X or Y 
-    (or both) are much wider than tall.
+def cka_wide(X, Y):
     """
+    Calculate CKA for two matrices. This algorithm uses a Gram matrix 
+    implementation, which is fast when the data is wider than it is 
+    tall.
+
+    This implementation is inspired by the one in this colab:
+    https://colab.research.google.com/github/google-research/google-research/blob/master/representation_similarity/Demo.ipynb#scrollTo=MkucRi3yn7UJ
+
+    Note that we use center the features rather than the Gram matrix
+    because we think the latter is tricky and mysterious. It only works for 
+    linear CKA though (we only implement linear CKA throughout).
+    """     
     X = X - X.mean(0, keepdims=True)
     Y = Y - Y.mean(0, keepdims=True)
 
-    Ux, Sx, _ = np.linalg.svd(X, full_matrices=False)
-    Uy, Sy, _ = np.linalg.svd(Y, full_matrices=False)
+    XXT = X @ X.T
+    YYT = Y @ Y.T
 
-    # Equation 14
-    bottom = np.sqrt((Sy ** 4).sum() * (Sx ** 4).sum())
-    top = np.sum((Sy ** 2) @ (Uy.T  @ Ux) ** 2 @ (Sx ** 2))
-
+    top = (XXT.ravel() * YYT.ravel()).sum()
+    bottom = np.sqrt((XXT ** 2).sum() * (YYT ** 2).sum())
     c = top / bottom
 
     return c
+
+
+def cka_tall(X, Y):
+    """
+    Calculate CKA for two matrices.
+    """
+    X = X - X.mean(0, keepdims=True)
+    Y = Y - Y.mean(0, keepdims=True)
+            
+    XTX = X.T @ X
+    YTY = Y.T @ Y
+    YTX = Y.T @ X
+
+    # Equation (4)
+    top = (YTX ** 2).sum()
+    bottom = np.sqrt((XTX ** 2).sum() * (YTY ** 2).sum())
+    c = top / bottom
+
+    return c
+
+def cka(X, Y):
+    """
+    Calculate CKA for two matrices.
+
+    CKA has several potential implementations. The naive implementation is 
+    appropriate for tall matrices (more examples than features), but this 
+    implementation uses lots of memory and it slow when there are many more 
+    features than examples. In that case, which often happens with DNNs, we 
+    prefer the Gram matrix variant.
+    """
+    
+    if X.shape[0] < X.shape[1]:
+        return cka_wide(X, Y)
+    else:
+        return cka_tall(X, Y)
 
 
 def multi_cka(reps: List[np.array]) -> np.array:
