@@ -133,7 +133,7 @@ Let's code CKA tests. We will turn properties of CKA listed in the paper into te
 
 # Live coding
 
-
+Note: to follow at home, look at `cka_step3.py` and `tests/test_cka_step3.py`.
 
 # What else can we know about CKA? Let's read the paper!
 
@@ -155,7 +155,7 @@ Let's code CKA tests. We will turn properties of CKA listed in the paper into te
 * Define boundary conditions, pathological examples
     * Test that bad inputs indeed raise errors! Your code should yell when you feed it bad inputs.
 * Lock in current behaviour for regression testing
-    * E.g. we implement a different, faster implementation of CKA in `cka_step4.py` and regression test it.
+    * E.g. we implement a different, faster implementation of CKA in `cka_step4.py` and regression test it in `test_cka_step4.py`.
 
 # Refactoring with confidence
 
@@ -166,7 +166,7 @@ Let's code CKA tests. We will turn properties of CKA listed in the paper into te
     4. Rewrite the code
     5. Iterate until tests pass again
 * Much less stressful with tests and git
-* Focus on one test at a time with `python test_cka.py TestCka.test_same`
+* Focus on one test at a time with `python test_cka_step3.py TestCka.test_same`
     * Don't forget to run the whole suite at the end!
 
 
