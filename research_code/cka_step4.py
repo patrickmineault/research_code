@@ -27,7 +27,9 @@ def cka_wide(X, Y):
     XXT = X @ X.T
     YYT = Y @ Y.T
 
-    top = (XXT.ravel() * YYT.ravel()).sum()
+    # We use reshape((-1,)) instead of ravel() to ensure this is compatible
+    # with numpy and pytorch tensors.
+    top = (XXT.reshape((-1,)) * YYT.reshape((-1,))).sum()
     bottom = np.sqrt((XXT ** 2).sum() * (YYT ** 2).sum())
     c = top / bottom
 

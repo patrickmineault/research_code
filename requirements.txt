@@ -1,3 +1,4 @@
 graphviz
 matplotlib
 seaborn
+torch

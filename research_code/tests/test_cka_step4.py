@@ -95,5 +95,19 @@ class TestCka(unittest.TestCase):
         self.assertNotEqual(c1, c2)
         self.assertAlmostEqual(c1, c2)
 
+    def test_torch(self):
+        """Check that this also works if the input is a pytorch tensor"""
+        # We put the import inside the function so the whole test suite doesn't
+        # crash if we don't have pytorch installed.
+        import torch
+
+        X, Y = _get_wide()
+        X, Y = torch.tensor(X), torch.tensor(Y)
+        c1 = cka_tall(X, Y)
+        c2 = cka_wide(X, Y)
+
+        self.assertNotEqual(c1.item(), c2.item())
+        self.assertAlmostEqual(c1.item(), c2.item())
+
 if __name__ == '__main__':
     unittest.main()
