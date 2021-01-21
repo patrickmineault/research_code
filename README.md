@@ -27,13 +27,7 @@ import research_code
 
 ## To test
 
-`cd` into the `research_code/tests` directory, then run each file individually, or run `nosetests`.
-
-Under WSL, permissions for files are elevated (everything has +x), so tests won't be picked up; you will need to run this instead:
-
-```
-nosetests --exe
-```
+`cd` into the `research_code/tests` directory, then run each file individually, or run `nose2`.
 
 ## CI
 
