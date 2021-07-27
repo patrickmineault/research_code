@@ -34,7 +34,7 @@
 
 # Compiling these slides
 
-Slides can be compiled with `./compile-all.sh`. Requires pandoc:
+Slides can be compiled with `make all`. Requires pandoc:
 
 ```
 sudo apt-get install pandoc texlive texlive-latex-extra

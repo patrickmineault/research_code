@@ -28,9 +28,9 @@ Intro
 
 * Patrick Mineault, PhD in neuroscience
 * (wildly underqualified) software engineer at Google
-* Research scientist at Facebook on brain-computer interfaces
-* Technical chair of Neuromatch Academy
-* Independent researcher and technologist
+* [Research scientist at Facebook Reality Labs on brain-computer interfaces](https://tech.fb.com/imagining-a-new-interface-hands-free-communication-without-saying-a-word/)
+* [Helped build NMA as first year CTO](https://xcorr.net/2021/03/25/building-neuromatch-academy/)
+* [Independent researcher](https://xcorr.net/) and technologist
 * Occasionally taught CS
 
 # Regrets, I've had a few
@@ -195,9 +195,10 @@ Whatever template you use, make sure it makes a local package for your code that
   * Variable names
   * imports
 * [Orgs like Google have their even more pedantic style guides](https://google.github.io/styleguide/pyguide.html).
-* There are linters which will catch style issues
+* There are linters and auto-formatters which will catch style issues
   * flake8
   * pylint
+  * black
 * Install them in VSCode
 
 # Docstrings

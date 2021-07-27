@@ -8,6 +8,8 @@ class TestFib(unittest.TestCase):
         self.assertEqual(fib.fib(0), 1)
         self.assertEqual(fib.fib(2), 2)
         self.assertEqual(fib.fib(4), 5)
+
+    def test_fib_big(self):
         self.assertEqual(fib.fib(99), 354_224_848_179_261_915_075)
 
     def test_memoization(self):
