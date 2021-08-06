@@ -4,6 +4,7 @@ This repo contains the slides and code for a presentation on writing research so
 
 * [The slides are here](https://github.com/patrickmineault/research_code/tree/main/docs/slides)
 * The rest of the repo contains supporting code in the format advocated in the first lesson.
+* You can see recordings of the presentation at [NMA 2021](https://www.crowdcast.io/e/nma2021/29) (long version) and [Brainhack MTL 2021](https://www.youtube.com/watch?v=gfPP2pQ8Rms&feature=youtu.be&ab_channel=OHBMOpenScienceSIG) (abridged version)
 
 ## Organization
 
