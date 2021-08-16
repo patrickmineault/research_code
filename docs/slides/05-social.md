@@ -26,6 +26,24 @@ Work with better people than you
 
 Q: what is pair programming?
 
+# Pair programming
+
+* Pair programming is a way for two programmers, potentially of different skill leves, to share knowledge through active practice
+* Traditional style: driver and navigator
+    * The driver physically types the code into the terminal/editor. They think about the micro-issues (e.g. what goes in the body of the for loop)
+    * The navigator tells the driver what to write. They typically focus about macro-issues (e.g. what should a function accomplish, how is it architected)
+
+# What you learn through pair programming
+
+* You practice your communication skills
+* You learn someone's productivity shortcuts. E.g. I learned about Ctrl+Shift+R (search in bash) through a pair programming session.
+* If someone has domain knowledge (e.g. neuroscience) and the other technical knowledge (e.g. Python), you will make faster progress than two people working separately
+
+# Tips on pair programming
+
+* Tools can make remote pair programming more comfortable
+  * Zoom screensharing (can lead to embarassment if e.g. you accidentally Alt-Tab to an ebay search for beanie babies)
+
 # Practical tips
 
 * Open an issue in an open source project
