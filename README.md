@@ -6,6 +6,8 @@ This repo contains the slides and code for a presentation on writing research so
 * The rest of the repo contains supporting code in the format advocated in the first lesson.
 * You can see the full presentation recorded at [NMA 2021](https://www.crowdcast.io/e/nma2021/29) and a short version focused on testing recorded at [Brainhack MTL 2021](https://www.youtube.com/watch?v=gfPP2pQ8Rms&feature=youtu.be&ab_channel=OHBMOpenScienceSIG).
 
+For the book version of these slides, see [goodresearch.dev](https://goodresearch.dev/).
+
 ## Organization
 
 This repo follows the organization of [shablona](https://github.com/uwescience/shablona). All the code and tests are under `research_code`. `research_code` is itself a Python package.
